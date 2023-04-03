@@ -20,12 +20,7 @@ from setuptools import setup
 
 
 # automatic labeling of dists
-versioneer.VCS = 'git'
-versioneer.versionfile_source = 'savReaderWriter/_version.py'
-versioneer.versionfile_build = 'savReaderWriter/_version.py'
-versioneer.tag_prefix = 'v'  # tags are like v1.2.0
-versioneer.parentdir_prefix = 'savReaderWriter-'
-version = versioneer.get_version()
+version = "2023.04.03"
 with open(join(dirname(__file__), "VERSION"), "w") as f:
     f.write(version)
 with open(join(dirname(__file__), "savReaderWriter/VERSION"), "w") as f:
