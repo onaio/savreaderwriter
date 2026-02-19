@@ -365,7 +365,7 @@ class SavReaderNp(SavReader):
         #    return self.struct_dtype
         dst_fmts = [u"f2", u"f4", u"f8", u"f8"]
         get_dtype = lambda src_fmt: dst_fmts[bisect([2, 5, 8], src_fmt)]
-        widths = [int(re.search(u"\d+", self.uformats[v]).group(0)) 
+        widths = [int(re.search(r"\d+", self.uformats[v]).group(0)) 
                   for v in self.uvarNames]
         formats = [u'a%s' % widths[i] if self.uvarTypes[v] else u"f8" if 
                    v in self.datetimevars else get_dtype(widths[i]) for 
